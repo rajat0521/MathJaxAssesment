@@ -21,7 +21,6 @@ function App() {
     const Url = `https://0h8nti4f08.execute-api.ap-northeast-1.amazonaws.com/getQuestionDetails/getquestiondetails?QuestionID=${questionIds[questionNumber-1]}`;
     axios.get(Url)
     .then((res) => {
-      console.log(res)
       setQuestionDetail(res.data[0].Question);
     })
   }, [questionNumber])
